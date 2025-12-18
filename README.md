@@ -8,6 +8,7 @@ A lightweight Windows system tray application that provides quick access to the 
 - 🖱️ **System Tray**: Runs quietly in your system tray
 - ⌨️ **Keyboard Shortcut**: Simulates `Win + Shift + C` to trigger PowerToys
 - 🪶 **Lightweight**: Minimal resource usage
+- 📦 **Portable**: Single exe file, no installation required
 - 🚀 **Auto-build**: Automated builds via GitHub Actions
 
 ## Prerequisites
@@ -22,9 +23,9 @@ A lightweight Windows system tray application that provides quick access to the 
 ### Option 1: Download Pre-built Release (Recommended)
 
 1. Go to the [Releases](https://github.com/YOUR_USERNAME/color-picker/releases) page
-2. Download the latest `.exe` installer
-3. Run the installer and follow the prompts
-4. Launch the app from the Start Menu or Desktop shortcut
+2. Download `PowerToysColorPickerTray.exe`
+3. Run the exe file - no installation required!
+4. The app will start and appear in your system tray
 
 ### Option 2: Build from Source
 
@@ -49,7 +50,7 @@ A lightweight Windows system tray application that provides quick access to the 
    npm run build:win
    ```
 
-5. The installer will be in the `dist` folder
+5. The portable exe (`PowerToysColorPickerTray.exe`) will be in the `dist` folder
 
 ## Usage
 
@@ -75,7 +76,7 @@ This starts the Electron app in development mode.
 npm run build:win
 ```
 
-Creates a Windows installer in the `dist` folder.
+Creates a portable Windows exe (`PowerToysColorPickerTray.exe`) in the `dist` folder - no installation required!
 
 ### Project Structure
 
@@ -113,14 +114,14 @@ color-picker/
 
 ## GitHub Actions
 
-This project uses GitHub Actions to automatically build the Windows installer on every push to the `main` branch.
+This project uses GitHub Actions to automatically build the portable Windows exe on every push to the `main` branch.
 
 ### Workflow Features
 
 - ✅ Builds on Windows runner
 - ✅ Installs Node.js 20
 - ✅ Generates icon automatically
-- ✅ Creates Windows installer
+- ✅ Creates portable Windows exe (no installer needed)
 - ✅ Uploads build artifacts
 - ✅ Creates releases when tagged
 
