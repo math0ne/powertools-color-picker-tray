@@ -41,6 +41,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
@@ -51,11 +53,21 @@ jobs:
       with:
         name: powertoys-color-picker-tray-windows
 
+    - name: Get current date
+      id: date
+      run: echo "date=$(date +'%Y-%m-%d-%H%M')" >> $GITHUB_OUTPUT
+
     - name: Create Release
-      id: create_release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
       with:
+        tag_name: build-${{ steps.date.outputs.date }}
+        name: Build ${{ steps.date.outputs.date }}
+        body: |
+          Automated build from commit ${{ github.sha }}
+
+          **Download**: PowerToysColorPickerTray.exe
+
+          Just download and run - no installation required!
         files: '*.exe'
         draft: false
         prerelease: false
