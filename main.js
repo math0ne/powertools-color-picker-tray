@@ -9,9 +9,9 @@ app.whenReady().then(() => {
   app.dock?.hide();
 
   // Create tray icon
-  const iconPath = path.join(__dirname, 'icon.png');
+  const iconPath = path.join(__dirname, 'tray-icon.png');
   const icon = nativeImage.createFromPath(iconPath);
-  tray = new Tray(icon.resize({ width: 16, height: 16 }));
+  tray = new Tray(icon);
 
   // Set tooltip
   tray.setToolTip('PowerToys Color Picker');

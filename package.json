@@ -39,7 +39,8 @@
     },
     "files": [
       "main.js",
-      "icon.png"
+      "icon.png",
+      "tray-icon.png"
     ]
   }
 }
