@@ -24,9 +24,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Generate icon
-      run: node generate-icon.js
-
     - name: Build application
       run: npm run build:win
 
