@@ -1,6 +1,6 @@
 # PowerToys Color Picker Tray
 
-A simple Windows system tray application that launches the Powertoys screenshot application when you click it
+A simple Windows system tray application that launches the Powertoys screenshot application when you click it.
 
 ![Screenshot](screenshot/screenshot.png)
 
