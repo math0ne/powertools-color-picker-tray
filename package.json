@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
-    "build:win": "electron-builder --win"
+    "build:win": "electron-builder --win",
+    "postinstall": "electron-rebuild"
   },
   "keywords": [
     "electron",
@@ -21,6 +22,7 @@
     "robotjs": "^0.6.0"
   },
   "devDependencies": {
+    "@electron/rebuild": "^4.0.2",
     "canvas": "^3.2.0",
     "electron": "^39.2.7",
     "electron-builder": "^26.0.12"
