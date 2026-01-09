@@ -1,6 +1,8 @@
 # PowerToys Color Picker Tray
 
-# Development
+A simple Windows system tray application that launches the Powertoys screenshot application when you click it
+
+## Development
 
  ```bash
  # Install dependencies
@@ -23,7 +25,7 @@ npm run build:win
    npm run build:win
    ```
 
-# Project Structure
+## Project Structure
 
 ```
 color-picker/
